@@ -4,7 +4,7 @@
 - **Unidade curricular:** Programação Web — Cliente
 - **Tema:** Website de uma cafetaria fictícia
 - **Nome do projeto:** Café Aroma
-- **Elementos do grupo:** [Nome do elemento 1] e [Nome do elemento 2]
+- **Elementos do grupo:** Tiago Bilotti Nunes e Brian Miguel Guerreiro Almeida
 - **Público-alvo:** Pessoas da comunidade local, estudantes, trabalhadores e visitantes que procuram café, pequenos-almoços e pastelaria.
 
 ## Objetivo
