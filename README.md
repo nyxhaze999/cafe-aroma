@@ -32,4 +32,4 @@ Abrir `index.html` num navegador. Para validar, enviar cada página para o [Vali
 - Texto alternativo descritivo para imagens informativas.
 
 ## Contribuições
-Preencher `docs/contribuicao-E1.md` com as tarefas reais de cada elemento e manter os commits individuais no Git.
+O registo de contribuição está em `docs/contribuicao-E1.md`.

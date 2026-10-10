@@ -9,10 +9,10 @@ Os esquemas seguintes representam a organização do conteúdo, não o design fi
 | Café Aroma                           |
 | Início | Menu | A nossa história     |
 +--------------------------------------+
-| H1: Um bom café começa aqui           |
+| H1: Um bom café começa aqui          |
 | Texto de apresentação                |
 | [Ligação para o menu]                |
-| [Imagem principal]                  |
+| [Imagem principal]                   |
 +--------------------------------------+
 | H2: O que encontra                   |
 | Lista de produtos/serviços           |
@@ -35,7 +35,7 @@ Os esquemas seguintes representam a organização do conteúdo, não o design fi
 | Nota sobre preços de exemplo         |
 +--------------------------------------+
 | H2: Bebidas                          |
-| Lista de bebidas                    |
+| Lista de bebidas                     |
 +--------------------------------------+
 | H2: Alguns preços                    |
 | Tabela: produto | categoria | preço  |
@@ -61,7 +61,7 @@ Os esquemas seguintes representam a organização do conteúdo, não o design fi
 | H2: O que nos inspira                |
 | Texto e lista de valores             |
 +--------------------------------------+
-| H2: Um ambiente acolhedor             |
+| H2: Um ambiente acolhedor            |
 | [Imagem mesas]                       |
 | [Imagem grãos de café]               |
 +--------------------------------------+
