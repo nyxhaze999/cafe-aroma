@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contacto com o Café Aroma para reservas, dúvidas ou sugestões.">
+    <title>Contactos - Café Aroma</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Fale Connosco</h1>
+            <p>Tem alguma dúvida, sugestão ou pretende fazer uma reserva? Preencha o formulário abaixo:</p>
+
+            <form action="#" method="POST">
+                
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Insira o seu nome">
+                </div>
+
+                <div>
+                    <label for="email">Endereço de Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@dominio.pt">
+                </div>
+
+                <div>
+                    <label for="telemovel">Telemóvel:</label>
+                    <input type="tel" id="telemovel" name="telemovel" pattern="[0-9]{9}" placeholder="912345678" required>
+                </div>
+
+                <div>
+                    <label for="assunto">Motivo do Contacto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="reserva">Reserva de Mesa</option>
+                        <option value="evento">Marcação de Evento</option>
+                        <option value="sugestao">Sugestão ou Reclamação</option>
+                        <option value="outro">Outro assunto</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="data-pretendida">Data Pretendida (opcional):</label>
+                    <input type="date" id="data-pretendida" name="data_pretendida">
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva aqui a sua mensagem..."></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                    <label for="newsletter">Deseja subscrever a nossa newsletter para receber novidades?</label>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Aroma. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
