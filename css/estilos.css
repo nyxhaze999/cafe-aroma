@@ -247,7 +247,12 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
-  margin-right: var(--espaco-1);
+  margin: 0 var(--espaco-1) 0 0;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline;
 }
 
 button,
