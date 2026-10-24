@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Café Aroma - folha de estilos principal
+   Valores definidos em docs/guia-estilo.md
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. VARIÁVEIS (cores, tipografia e espaçamentos do guia de estilo)
+   ========================================================================== */
+:root {
+  /* Cores */
+  --cor-fundo: #FFF8F0;
+  --cor-texto: #2B1B12;
+  --cor-principal: #5A3825;
+  --cor-destaque: #8A3B12;
+  --cor-fundo-sec: #EFE0D0;
+  --cor-foco: #0B5FFF;
+  --cor-sobre-principal: #FFFFFF;
+
+  /* Tipografia */
+  --fonte-titulos: Georgia, "Times New Roman", serif;
+  --fonte-texto: system-ui, "Segoe UI", Arial, sans-serif;
+
+  /* Espaçamentos (unidade base de 0,5rem) */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2rem;
+}
+
+
+/* ==========================================================================
+   2. BASE (modelo de caixa, corpo da página e imagens)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   3. TIPOGRAFIA (títulos, parágrafos e listas)
+   ========================================================================== */
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--espaco-2);
+  font-family: var(--fonte-titulos);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 var(--espaco-2);
+}
+
+
+/* ==========================================================================
+   4. LIGAÇÕES E ESTADO DE FOCO
+   ========================================================================== */
+a {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+/* Contorno visível na navegação por teclado (fundos claros) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   5. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+body > header {
+  padding: var(--espaco-2) var(--espaco-3);
+  color: var(--cor-fundo);
+  background-color: var(--cor-principal);
+}
+
+body > header p {
+  margin: 0;
+  font-family: var(--fonte-titulos);
+  font-size: 1.25rem;
+}
+
+body > header a {
+  color: var(--cor-fundo);
+}
+
+/* O azul não tem contraste suficiente sobre o castanho: usa-se o creme */
+body > header a:focus-visible {
+  outline-color: var(--cor-fundo);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-3);
+  margin: var(--espaco-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+
+/* ==========================================================================
+   6. CONTEÚDO PRINCIPAL (main, secções e figuras)
+   ========================================================================== */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espaco-3);
+}
+
+section,
+article {
+  margin-bottom: var(--espaco-3);
+}
+
+figure {
+  margin: 0 0 var(--espaco-2);
+}
+
+figcaption {
+  font-size: 0.875rem;
+}
+
+details {
+  margin-bottom: var(--espaco-2);
+}
+
+summary {
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   7. TABELAS
+   ========================================================================== */
+table {
+  width: 100%;
+  margin-bottom: var(--espaco-3);
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: var(--espaco-1);
+  text-align: left;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: var(--espaco-1) 0.75rem;
+  text-align: left;
+}
+
+th {
+  color: var(--cor-sobre-principal);
+  background-color: var(--cor-principal);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--cor-fundo-sec);
+}
+
+
+/* ==========================================================================
+   8. FORMULÁRIOS
+   ========================================================================== */
+fieldset {
+  margin: 0 0 var(--espaco-3);
+  padding: var(--espaco-2);
+  border: 2px solid var(--cor-principal);
+  border-radius: 4px;
+}
+
+legend {
+  padding: 0 var(--espaco-1);
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: var(--espaco-2);
+  padding: var(--espaco-1);
+  font: inherit;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-principal);
+  border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: var(--espaco-1);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  padding: var(--espaco-1) var(--espaco-3);
+  font: inherit;
+  color: var(--cor-sobre-principal);
+  background-color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+
+/* ==========================================================================
+   9. RODAPÉ
+   ========================================================================== */
+body > footer {
+  margin-top: var(--espaco-4);
+  padding: var(--espaco-2) var(--espaco-3);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background-color: var(--cor-fundo-sec);
+}
+
+body > footer p {
+  margin: 0;
+}
