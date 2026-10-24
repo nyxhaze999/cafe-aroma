@@ -13,12 +13,12 @@
 
 | Ficheiro | Erros | Avisos | Captura |
 |---|---|---|---|
-| `index.html` | 0 | 0 | `docs/validacao-E3/html-index.png` |
-| `menu.html` | 0 | 0 | `docs/validacao-E3/html-menu.png` |
-| `historia.html` | 0 | 0 | `docs/validacao-E3/html-historia.png` |
-| `contacto.html` | 0 | 0 | `docs/validacao-E3/html-contacto.png` |
-| `artigo.html` | 0 | 0 | `docs/validacao-E3/html-artigo.png` |
-| `css/estilos.css` | 0 | 6 | `docs/validacao-E3/css-estilos.png` |
+| `index.html` | 0 | 0 | `docs/provas-E3/prova_index.png` |
+| `menu.html` | 0 | 0 | `docs/provas-E3/prova_menu.png` |
+| `historia.html` | 0 | 0 | `docs/provas-E3/prova_historia.png` |
+| `contacto.html` | 0 | 0 | `docs/provas-E3/prova_contacto.png` |
+| `artigo.html` | 0 | 0 | `docs/provas-E3/prova_artigo.png` |
+| `css/estilos.css` | 0 | 6 | `docs/provas-E3/prova_css.png` |
 
 ## Notas
 
