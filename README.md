@@ -20,7 +20,7 @@ Criar um website estático, acessível e responsivo para apresentar a cafetaria,
 - `docs/` — sitemap, wireframes, checklist e registo de contribuição
 
 ## Tecnologias nesta fase
-HTML5. As folhas de estilo CSS e as funcionalidades JavaScript serão acrescentadas nas entregas seguintes, de acordo com o enunciado.
+“HTML5 e CSS3 (folha de estilos externa em css/estilos.css, baseada no guia de estilo em docs/guia-estilo.md). JavaScript será acrescentado nas entregas seguintes.” Acrescenta também a pasta css/ à secção “Estrutura”
 
 ## Como visualizar
 Abrir `index.html` num navegador. Para validar, enviar cada página para o [Validador HTML do W3C](https://validator.w3.org/).
