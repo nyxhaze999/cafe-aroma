@@ -43,7 +43,7 @@ Mínimos exigidos (WCAG 2.2, nível AA): 4,5:1 para texto normal, 3:1 para texto
 | `#0B5FFF` | `#FFF8F0` | 4,87:1 | Contorno de foco (mínimo 3:1) | Sim |
 | `#0B5FFF` | `#EFE0D0` | 3,97:1 | Contorno de foco no rodapé (mínimo 3:1) | Sim |
 | `#0B5FFF` | `#5A3825` | 2,02:1 | Contorno de foco sobre o cabeçalho | **Não** |
-
+ 
 Rácios calculados com a fórmula de luminância relativa do WCAG 2.2 e conferidos com um verificador de contraste.
 
 ## 5. Estado de foco
