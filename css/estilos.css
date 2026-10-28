@@ -290,3 +290,50 @@ body > footer {
 body > footer p {
   margin: 0;
 }
+
+/* ==========================================================================
+   10. Estilos do Menu Hamburguer
+   ========================================================================== */
+.menu-toggle {
+  display: none; /* Oculto por defeito em desktop */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 28px;
+}
+
+.hamburger-bar {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--cor-texto, #333);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsividade para telemóveis e tablets */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Visível em ecrãs pequenos */
+  }
+
+  .nav-list {
+    display: none; /* Esconde a lista de navegação por defeito em mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cor-fundo-nav, #fff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+
+  .nav-list.nav-ativa {
+    display: flex; /* Mostra o menu quando acionado pelo JavaScript */
+  }
+}
