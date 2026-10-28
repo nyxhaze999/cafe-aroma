@@ -12,9 +12,20 @@
   <header>
     <p><a href="index.html">Café Aroma</a></p>
       <nav aria-label="Navegação principal">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <button 
+          id="menu-toggle" 
+          class="menu-toggle" 
+          aria-expanded="false" 
+          aria-controls="menu-principal"
+          aria-label="Abrir menu de navegação">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+       </button>
+       
+        <ul id="menu-principal" class="nav-list">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="historia.html">História</a></li>
           <li><a href="contacto.html">Contactos</a></li>
           <li><a href="artigo.html">Artigo (IA)</a></li>
