@@ -113,9 +113,14 @@ summary:focus-visible {
    5. CABEÇALHO E NAVEGAÇÃO
    ========================================================================== */
 body > header {
+  position: relative; /* Garante que o menu absoluto se posiciona em relação ao cabeçalho */
   padding: var(--espaco-2) var(--espaco-3);
   color: var(--cor-fundo);
   background-color: var(--cor-principal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 body > header p {
@@ -128,22 +133,12 @@ body > header a {
   color: var(--cor-fundo);
 }
 
-/* O azul não tem contraste suficiente sobre o castanho: usa-se o creme */
 body > header a:focus-visible {
   outline-color: var(--cor-fundo);
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--espaco-1) var(--espaco-3);
-  margin: var(--espaco-1) 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav a[aria-current="page"] {
-  font-weight: bold;
+nav {
+  position: static;
 }
 
 
@@ -295,7 +290,7 @@ body > footer p {
    10. Estilos do Menu Hamburguer
    ========================================================================== */
 .menu-toggle {
-  display: none;
+  display: flex; /* Visível em todos os ecrãs */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -310,30 +305,41 @@ body > footer p {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #333;
+  background-color: var(--cor-fundo);
   border-radius: 2px;
 }
 
-/* Em ecrãs móveis (<= 768px) */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex !important;
-  }
+.nav-list {
+  display: none; /* Escondido por defeito até ser aberto */
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-principal);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: var(--espaco-2) var(--espaco-3);
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
 
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
-    z-index: 1000;
-  }
+.nav-list li {
+  margin-bottom: var(--espaco-1);
+}
 
-  .nav-list.nav-ativa {
-    display: flex !important;
-  }
+.nav-list a {
+  color: var(--cor-fundo);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Quando o JavaScript adiciona esta classe, o menu abre em qualquer dispositivo */
+.nav-list.nav-ativa {
+  display: flex !important;
 }
