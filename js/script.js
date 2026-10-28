@@ -1,0 +1,1 @@
+console.log("Café Aroma: JavaScript carregado com sucesso!");
