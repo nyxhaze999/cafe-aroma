@@ -3,7 +3,6 @@
    Valores definidos em docs/guia-estilo.md
    ========================================================================== */
 
-
 /* ==========================================================================
    1. VARIÁVEIS (cores, tipografia e espaçamentos do guia de estilo)
    ========================================================================== */
@@ -28,7 +27,6 @@
   --espaco-4: 2rem;
 }
 
-
 /* ==========================================================================
    2. BASE (modelo de caixa, corpo da página e imagens)
    ========================================================================== */
@@ -49,44 +47,30 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 100%; /* Garante que a imagem não excede o ecrã no telemóvel */
   height: auto;
 }
-
 
 /* ==========================================================================
    3. TIPOGRAFIA (títulos, parágrafos e listas)
    ========================================================================== */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 0 0 var(--espaco-2);
   font-family: var(--fonte-titulos);
   font-weight: 400;
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 1.75rem;
-}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.125rem; }
 
-h2 {
-  font-size: 1.25rem;
-}
-
-h3 {
-  font-size: 1.125rem;
-}
-
-p,
-ul,
-ol {
+p, ul, ol {
   margin: 0 0 var(--espaco-2);
 }
 
-
 /* ==========================================================================
-   4. LIGAÇÕES E ESTADO DE FOCO
+   4. LIGAÇÕES, ESTADO DE FOCO E ALVOS DE TOQUE
    ========================================================================== */
 a {
   color: var(--cor-destaque);
@@ -108,6 +92,11 @@ summary:focus-visible {
   outline-offset: 2px;
 }
 
+/* Alvos de toque com pelo menos 24x24 px CSS */
+a, button, input, select, textarea, summary {
+  min-width: 24px;
+  min-height: 24px;
+}
 
 /* ==========================================================================
    5. CABEÇALHO E NAVEGAÇÃO
@@ -141,7 +130,6 @@ nav {
   position: static;
 }
 
-
 /* ==========================================================================
    6. CONTEÚDO PRINCIPAL (main, secções e figuras)
    ========================================================================== */
@@ -151,8 +139,7 @@ main {
   padding: var(--espaco-3);
 }
 
-section,
-article {
+section, article {
   margin-bottom: var(--espaco-3);
 }
 
@@ -172,7 +159,6 @@ summary {
   cursor: pointer;
 }
 
-
 /* ==========================================================================
    7. TABELAS
    ========================================================================== */
@@ -188,8 +174,7 @@ caption {
   font-weight: bold;
 }
 
-th,
-td {
+th, td {
   padding: var(--espaco-1) 0.75rem;
   text-align: left;
 }
@@ -202,7 +187,6 @@ th {
 tbody tr:nth-child(even) {
   background-color: var(--cor-fundo-sec);
 }
-
 
 /* ==========================================================================
    8. FORMULÁRIOS
@@ -225,9 +209,7 @@ label {
   font-weight: bold;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   max-width: 30rem;
   margin-bottom: var(--espaco-2);
@@ -239,8 +221,7 @@ textarea {
   border-radius: 4px;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   width: auto;
   margin: 0 var(--espaco-1) 0 0;
 }
@@ -250,9 +231,7 @@ input[type="radio"] + label {
   display: inline;
 }
 
-button,
-input[type="submit"],
-input[type="reset"] {
+button, input[type="submit"], input[type="reset"] {
   width: auto;
   padding: var(--espaco-1) var(--espaco-3);
   font: inherit;
@@ -263,13 +242,10 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
   background-color: var(--cor-destaque);
   border-color: var(--cor-destaque);
 }
-
 
 /* ==========================================================================
    9. RODAPÉ
@@ -287,10 +263,10 @@ body > footer p {
 }
 
 /* ==========================================================================
-   10. Estilos do Menu Hamburguer
+   10. ESTILOS DO MENU HAMBÚRGUER (MOBILE-FIRST)
    ========================================================================== */
 .menu-toggle {
-  display: flex; /* Visível em todos os ecrãs */
+  display: flex; /* Visível nos telemóveis */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -310,7 +286,7 @@ body > footer p {
 }
 
 .nav-list {
-  display: none; /* Escondido por defeito até ser aberto */
+  display: none; /* Escondido por defeito até ser aberto no telemóvel */
   flex-direction: column;
   width: 100%;
   position: absolute;
@@ -339,7 +315,71 @@ body > footer p {
   text-decoration: underline;
 }
 
-/* Quando o JavaScript adiciona esta classe, o menu abre em qualquer dispositivo */
+/* Quando o JavaScript adiciona esta classe, o menu abre no telemóvel */
 .nav-list.nav-ativa {
   display: flex !important;
+}
+
+/* ==========================================================================
+   11. GRELHA DE CONTEÚDOS
+   ========================================================================== */
+.grelha-conteudo {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: 1 coluna */
+  gap: var(--espaco-2);
+}
+
+/* ==========================================================================
+   12. RESPONSIVIDADE (MEDIA QUERIES) - 3 Pontos de rutura
+   ========================================================================== */
+/* Ponto de rutura 1: Tablets pequenos (ex: 600px) */
+@media (min-width: 600px) {
+  .grelha-conteudo {
+    grid-template-columns: repeat(2, 1fr); /* Galeria com 2 colunas */
+  }
+}
+
+/* Ponto de rutura 2: Tablets maiores / Portáteis (ex: 900px) */
+@media (min-width: 900px) {
+  /* Esconder o botão hambúrguer e mostrar menu horizontal com Flexbox */
+  .menu-toggle {
+    display: none; 
+  }
+  
+  .nav-list {
+    display: flex !important; 
+    flex-direction: row; 
+    position: static;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: var(--espaco-3);
+  }
+
+  .nav-list li {
+    margin-bottom: 0;
+  }
+
+  .nav-list a {
+    padding: 0;
+  }
+
+  /* Expandir a galeria para 3 colunas */
+  .grelha-conteudo {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+/* Ponto de rutura 3: Ecrãs grandes (ex: 1200px) */
+@media (min-width: 1200px) {
+  /* Evitar a deslocação horizontal e estabilizar as margens do layout */
+  main {
+    padding: var(--espaco-4);
+  }
+  
+  /* Expandir a galeria para 4 colunas em desktops */
+  .grelha-conteudo {
+    grid-template-columns: repeat(4, 1fr); 
+  }
 }

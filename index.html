@@ -11,27 +11,27 @@
 <body>
   <header>
     <p><a href="index.html">Café Aroma</a></p>
-      <nav aria-label="Navegação principal">
-        <button 
-          id="menu-toggle" 
-          class="menu-toggle" 
-          aria-expanded="false" 
-          aria-controls="menu-principal"
-          aria-label="Abrir menu de navegação">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-       </button>
-       
-        <ul id="menu-principal" class="nav-list">
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="historia.html">História</a></li>
-          <li><a href="contacto.html">Contactos</a></li>
-          <li><a href="artigo/artigo.html">Artigo (IA)</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav aria-label="Navegação principal">
+      <button 
+        id="menu-toggle" 
+        class="menu-toggle" 
+        aria-expanded="false" 
+        aria-controls="menu-principal"
+        aria-label="Abrir menu de navegação">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      
+      <ul id="menu-principal" class="nav-list">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="contacto.html">Contactos</a></li>
+        <li><a href="artigo/artigo.html">Artigo (IA)</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section>
@@ -55,13 +55,23 @@
 
     <section>
       <h2>O nosso espaço</h2>
-      <div>
+      <!-- Aplicação da classe grelha-conteudo definida na E5 -->
+      <div class="grelha-conteudo">
+        <!-- Imagem Responsiva 1 com <picture> -->
         <figure>
-          <img src="imagens/cafe-expresso.svg" alt="Chávena de café expresso servida sobre um balcão">
+          <picture>
+            <source media="(min-width: 600px)" srcset="imagens/cafe-expresso.svg">
+            <img src="imagens/cafe-expresso.svg" alt="Chávena de café expresso servida sobre um balcão">
+          </picture>
           <figcaption>Café preparado no momento.</figcaption>
         </figure>
+
+        <!-- Imagem Responsiva 2 com <picture> -->
         <figure>
-          <img src="imagens/pastelaria.svg" alt="Seleção de bolos e peças de pastelaria numa vitrina">
+          <picture>
+            <source media="(min-width: 600px)" srcset="imagens/pastelaria.svg">
+            <img src="imagens/pastelaria.svg" alt="Seleção de bolos e peças de pastelaria numa vitrina">
+          </picture>
           <figcaption>Pastelaria para acompanhar a sua bebida.</figcaption>
         </figure>
       </div>
