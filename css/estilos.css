@@ -383,3 +383,48 @@ body > footer p {
     grid-template-columns: repeat(4, 1fr); 
   }
 }
+
+/* ===============================================
+   13. Personalizações E6 - Bootstrap & Café Aroma
+   =============================================== */
+
+/* Cor de fundo e tipografia personalizada para a Navbar do Bootstrap */
+.navbar {
+  background-color: #3e2723 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de transição e elevação nos Cards do Bootstrap */
+.card {
+  border: 1px solid #d7ccc8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(62, 39, 35, 0.15);
+}
+
+/* Personalização dos botões do Bootstrap com as cores da marca */
+.btn-primary {
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+}
+
+.btn-primary:hover {
+  background-color: #5c3a21;
+  border-color: #5c3a21;
+}
+
+/* Estilização personalizada para os itens do Accordion */
+.accordion-button:not(.collapsed) {
+  background-color: #efebe9;
+  color: #3e2723;
+  font-weight: bold;
+}
+
+/* Ajuste de margens e espaçamento padrão para os containers de grelha */
+.container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
