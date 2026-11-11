@@ -15,6 +15,11 @@ Criar um website estático, acessível e responsivo para apresentar a cafetaria,
 - `menu.html` — menu e tabela de preços
 - `historia.html` — história e galeria
 
+## Tecnologias e Frameworks
+- **HTML5 e CSS3** (folha de estilos externa em `css/estilos.css`)
+- **Framework CSS:** Bootstrap (Versão 5.3.3)
+- **JavaScript** (para interatividade e controlo de componentes dinâmicos)
+
 ## Estrutura
 - `imagens/` — imagens usadas nas páginas
 - `docs/` — sitemap, wireframes, checklist e registo de contribuição
