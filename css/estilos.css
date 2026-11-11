@@ -180,12 +180,12 @@ th, td {
 }
 
 th {
-  color: var(--cor-sobre-principal);
-  background-color: var(--cor-principal);
+  color: var(--cor-sobre-principal) !important;
+  background-color: var(--cor-principal) !important;
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--cor-fundo-sec);
+  background-color: var(--cor-fundo-sec) !important;
 }
 
 /* ==========================================================================
